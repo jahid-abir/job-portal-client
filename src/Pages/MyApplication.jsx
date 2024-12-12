@@ -9,7 +9,7 @@ const MyApplication = () => {
         fetch(`http://localhost:5000/job-applications?email=${user.email}`)
             .then(res => res.json())
             .then(data => setJobs(data))
-    }, [])
+    }, [user.email])
     return (
         <div className="overflow-x-auto">
             <table className="table">
